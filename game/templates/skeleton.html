@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MemeStation</title>
+
+    <!-- Loads the path to your static files -->
+    <!-- Refreshes everytime! -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sitestyle.css' %}?{% now 'U' %}"/>
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Staatliches|Anton" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body id="bootstrap-overrides">
+    <div class="container main-body">
+        <div class="row">
+            <div class="col">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'popper.js' %}"></script>
+<script type="text/javascript" src="{% static 'bootstrap.min.js' %}"></script>
+
+</html>

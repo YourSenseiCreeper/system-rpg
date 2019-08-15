@@ -1,0 +1,100 @@
+
+/*Body declaration*/
+#bootstrap-overrides {
+    background-color: #212529;
+}
+
+/*body > h1*/
+#bootstrap-overrrides h1 {
+    color: #fcc728;
+}
+
+#register {
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    color: #a3a3a3;
+}
+
+#register h1 {
+    color: #fcc728;
+}
+
+h1 {
+    color: #8eff49;
+}
+
+.container.main-body{
+    margin: 0px auto;
+    margin-top: 55px;
+    width: 60%;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.meme-button{
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+    color: #8eff49;
+    background: #343a40;
+    padding: 0px 10px;
+    margin-top: 5px;
+    border: 0px;
+}
+
+.text{
+    font-family: 'Lobster';
+    font-size: 15px;
+    color: #a3a3a3;
+}
+
+.navbar-default {
+    width: 60%;
+    margin: 0px auto;
+}
+
+
+#footer {
+    width: 60%;
+    margin: 0px auto;
+    margin-bottom: 45px;
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    color: #fcc728;
+    background-color: #343a40;
+}
+
+#spacer {
+    width: 75%;
+    margin: 0px auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 2px solid #fcc728;
+}
+
+.nav-link {
+    font-family: 'Lobster', cursive;
+    color: #fcc728;
+}
+
+#nav-button {
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #fcc728;
+    border: 0px;
+    transition: color .15s ease-in-out,background-color .5s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+
+.answers-table > table,tr,td{
+    padding: 15px;
+}

@@ -1,0 +1,13 @@
+{% extends "skeleton.html" %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sitestyle.css' %}?{% now 'U' %}"/>
+{% endblock %}
+
+{% block content %}
+<h1>Be patient, game is coming!</h1>
+<a href="{% url 'game:editor' %}" class="btn-primary"><span>Edytor</span></a>
+<a href="{% url 'game:dashboard' %}" class="btn-primary"><span>Dashboard</span></a>
+
+{% endblock %}

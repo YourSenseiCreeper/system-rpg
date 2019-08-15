@@ -1,0 +1,28 @@
+{% extends "skeleton.html" %}
+{% block content %}
+<style>
+    /* Do zmiany */
+    #answer {
+        width:"100px";
+        height:"100px"
+    }
+</style>
+
+
+{% for dialogue in data %}
+    <div>
+        <!-- <p> powoduje wstawienie domyślnych marginesów, których nie chcemy -->
+        <h2>{{ dialogue.friendly_name }}</h2>
+        <span>{{ dialogue.character}} </span>
+        <div><textarea id="answer">{{ dialogue.narration.text }}</textarea></div>
+        <!-- Odpowiedzi mają być 4 w tabelce  -->
+        <!-- Odpowiedź 1 | Odpowiedź 2 -->
+        <!-- ------------------------- -->
+        <!-- Odpowiedź 3 | Odpowiedź 4 -->
+        {% for answer in dialogue.answers.all %}
+            <span>Answer: {{ answer.text }}</span><br>
+        {% endfor %}
+        <!-- -->
+    </div>
+{% endfor %}
+{% endblock %}

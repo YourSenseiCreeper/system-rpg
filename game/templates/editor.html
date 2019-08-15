@@ -1,0 +1,52 @@
+{% extends "skeleton.html" %}
+
+{% block content %}
+<h1>Dodaj dialog</h1>
+{{ form.non_field_errors }}
+<form action="{% url 'game:editor' %}" method="post">
+    {% csrf_token %}
+    <div class="fieldWrapper">
+        {{ form.location.errors }}
+        <label for="{{ form.location.id_for_label }}">Location:</label>
+        {{ form.location }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.answers.errors }}
+        <label for="{{ form.answers.id_for_label }}">AnswerID:</label>
+        <table class="answers-table">
+            <tr>
+                <td >Answer 1</td>
+                <td>Answer 2</td>
+            </tr>
+            <tr>
+                <td>Answer 3</td>
+                <td>Answer 4</td>
+            </tr>
+        </table>
+        <p>Put here four different answers</p>
+        {{ form.answers }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.access_lvl.errors }}
+        <label for="{{ form.access_lvl.id_for_label }}">Access level:</label>
+        {{ form.access_lvl }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.character.errors }}
+        <label for="{{ form.character.id_for_label }}">Character:</label>
+        {{ form.character }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.narration.errors }}
+        <label for="{{ form.narration.id_for_label }}">Narration:</label>
+        {{ form.narration }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.friendly_name.errors }}
+        <label for="{{ form.friendly_name.id_for_label }}">Przyjazna nazwa:</label>
+        {{ form.friendly_name }}
+    </div>
+    <input type="submit" value="Dodaj">
+</form>
+<a href="{% url 'game:index' %}">Powrót</a>
+{% endblock %}
