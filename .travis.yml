@@ -3,4 +3,6 @@ deploy:
   provider: heroku
   api_key: 
     secure: cff8a8fe-4e02-47a9-ab3b-c4aa6cbb602a
-  on: staging
+  app:
+    staging: my-app-staging
+    #master: my-app-production
